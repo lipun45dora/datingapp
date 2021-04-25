@@ -12,6 +12,9 @@ using API.Services;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using API.Middleware;
+using API.Helpers;
+using AutoMapper;
+
 namespace API
 {
     public class Startup
@@ -31,6 +34,14 @@ namespace API
             services.AddControllers();
             services.AddCors();
             services.AddIdentityServices(_config);
+            
+            //services.AddAutoMapper();
+           /* var mappingConfig =new MapperConfiguration(mc => {
+                mc.AddProfile(new AutoMapperProfiles());
+            });
+            IMapper mapper=mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+            services.AddMvc();*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
