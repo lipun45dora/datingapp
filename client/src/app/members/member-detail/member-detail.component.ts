@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Member } from 'src/app/_models/member';
 
 @Component({
   selector: 'app-member-detail',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemberDetailComponent implements OnInit {
 
-  constructor() { }
+ // member: Member;
+
+ // constructor( private memberService: MemberServices, private route; ActivatedRoute) { }
 
   ngOnInit(): void {
   }
-
+/*loadMember()
+{
+  this.memberService.getMember(this.route.snapshot.paraMap)
+}*/
 }
